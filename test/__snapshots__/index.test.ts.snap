@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`shallow merge > deep merge with overlaps 1`] = `
+{
+  "accounts": {
+    "github": "unknown",
+    "twitter": "antfu7",
+  },
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "Vue",
+  ],
+  "name": "Anthony",
+}
+`;
