@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { deepMerge } from '../src'
+import { deepMerge } from '.'
 
 describe('shallow merge', () => {
   it('shallow merge objects', () => {
@@ -70,7 +70,21 @@ describe('shallow merge', () => {
     // })
 
     // use Snapshot: the result above would be saved in a file
-    expect(merged).toMatchSnapshot()
+    // while using toMatchInlineSnapshot saves the results inline for reference
+    expect(merged).toMatchInlineSnapshot(`
+      {
+        "accounts": {
+          "github": "unknown",
+          "twitter": "antfu7",
+        },
+        "languages": [
+          "JavaScript",
+          "TypeScript",
+          "Vue",
+        ],
+        "name": "Anthony",
+      }
+    `)
   })
 
   it('throws when merging different types', () => {
