@@ -1,0 +1,10 @@
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { getPostBody } from './network'
+
+
+describe('mocking network calls', () => {
+  it('should test fetch mock', async () => {
+    const result = await getPostBody(1)
+    console.log(':::result', result)
+  })
+})
